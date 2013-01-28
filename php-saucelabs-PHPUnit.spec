@@ -4,17 +4,17 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - regression testing framework for unit tests
 Summary(pl.UTF-8):	%{_pearname} - zestaw testów regresyjnych
-Name:		php-phpunit-%{_pearname}
-Version:	3.5.15
+Name:		php-saucelabs-%{_pearname}
+Version:	3.5.24
 Release:	1
 License:	BSD
 Group:		Development/Languages/PHP
-Source0:	http://pear.phpunit.de/get/PHPUnit-%{version}.tgz
-# Source0-md5:	73dabdddb977d41518badb32075f19fd
+Source0:	http://saucelabs.github.com/pear/get/PHPUnit-%{version}.tgz
+# Source0-md5:	1feb243062a70292b9707b992dee5d85
 URL:		http://www.phpunit.de/
 BuildRequires:	php-channel(components.ez.no)
-BuildRequires:	php-channel(pear.phpunit.de)
 BuildRequires:	php-channel(pear.symfony-project.com)
+BuildRequires:	php-channel(saucelabs.github.com/pear)
 BuildRequires:	php-pear >= 4:1.1-2
 BuildRequires:	php-pear-PEAR >= 1:1.9.2
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -86,6 +86,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
-%{php_pear_dir}/.registry/.channel.pear.phpunit.de/*.reg
+%{php_pear_dir}/.registry/.channel.saucelabs.github.com_pear/phpunit.reg
 %attr(755,root,root) %{_bindir}/phpunit
 %{php_pear_dir}/PHPUnit
