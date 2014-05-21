@@ -19,10 +19,12 @@ BuildRequires:	php-pear >= 4:1.1-2
 BuildRequires:	php-pear-PEAR >= 1:1.9.2
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.473
+Requires:	php(core) >= %{php_min_version}
+Requires:	php(dom)
+Requires:	php(pcre)
+Requires:	php(reflection)
+Requires:	php(spl)
 Requires:	php-channel(pear.phpunit.de)
-Requires:	php-common >= 4:%{php_min_version}
-Requires:	php-dom
-Requires:	php-pcre
 Requires:	php-pear >= 4:1.1-2
 Requires:	php-pear-XML_RPC2
 Requires:	php-phpunit-DbUnit >= 1.0.0
@@ -32,16 +34,14 @@ Requires:	php-phpunit-PHPUnit_Selenium >= 1.0.1
 Requires:	php-phpunit-PHP_CodeCoverage >= 1.0.2
 Requires:	php-phpunit-PHP_Timer >= 1.0.0
 Requires:	php-phpunit-Text_Template >= 1.0.0
-Requires:	php-reflection
-Requires:	php-spl
 Requires:	php-symfony-YAML >= 1.0.2
-Suggests:	php-curl
+Suggests:	php(curl)
+Suggests:	php(json)
+Suggests:	php(pdo)
+Suggests:	php(simplexml)
+Suggests:	php(soap)
+Suggests:	php(tokenizer)
 Suggests:	php-dbus
-Suggests:	php-json
-Suggests:	php-pdo
-Suggests:	php-simplexml
-Suggests:	php-soap
-Suggests:	php-tokenizer
 Provides:	php-PHPUnit = %{version}
 Obsoletes:	php-PHPUnit < 3.5
 Obsoletes:	php-PHPUnit-tests
