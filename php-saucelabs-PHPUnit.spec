@@ -1,7 +1,6 @@
 %define		_status		stable
 %define		_pearname PHPUnit
 %define		php_min_version 5.2.7
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - regression testing framework for unit tests
 Summary(pl.UTF-8):	%{_pearname} - zestaw testów regresyjnych
 Name:		php-saucelabs-%{_pearname}
